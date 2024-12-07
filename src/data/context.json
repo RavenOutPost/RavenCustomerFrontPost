@@ -1,0 +1,36 @@
+[
+  {
+    "type" : "text",
+    "title" : "C'est quoi ton nom ? ",
+    "key" : "name"
+  },  {
+    "type" : "text",
+    "title" : "Prénom",
+    "key" : "firstname"
+  },  {
+    "type" : "date",
+    "title" : "Date de naissance",
+    "key" : "birthdate"
+  },  {
+    "type" : "selector",
+    "title" : "Pronom(s) avec le(s)quel(s) tu es à l’aise",
+    "key" : "pronun",
+    "values" : ["il", "elle", "iel", "ael"]
+  },  {
+    "type" : "phone",
+    "title" : "Numero de téléphone",
+    "key" : "phone"
+  },  {
+    "type" : "email",
+    "title" : "Adresse e-mail ",
+    "key" : "email"
+  },  {
+    "type" : "dispo",
+    "title" : "Disponibilités",
+    "key" : "dispo"
+  },  {
+    "type" : "text",
+    "title" : "Précisions concernant les disponibilités ",
+    "key" : "dispo_comment"
+  }
+]
