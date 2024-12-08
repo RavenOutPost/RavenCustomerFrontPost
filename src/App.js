@@ -24,33 +24,26 @@ const App = () => {
     }
   }
 
-  const retrieveFile = (base64File) => {
-    const byteString = atob(base64File.split(',')[1]); 
-    const mimeType = base64File.split(',')[0].match(/:(.*?);/)[1]; 
-    const arrayBuffer = new Uint8Array(byteString.length);
-
-    for (let i = 0; i < byteString.length; i++) {
-      arrayBuffer[i] = byteString.charCodeAt(i);
-    }
-
-    return new Blob([arrayBuffer], { type: mimeType });
-  };
 
   const formik = useFormik({
     initialValues: {},
     onSubmit: async (_) => {
+      console.log('ij')
       setcheckErr(true)
       let err = false
       const formData = new FormData();
 
       [...context, ...flash, ...project].forEach(e => {
         let item = localStorage.getItem(e.key)
+        if (e.type === 'file') {
+          console.log('la')
+          let fileInput = document.getElementById(`file-${e.key}`)
+          item = fileInput?.files[0]
+        }
         if (!item && e.mandatory) {
           err = true
         }
-        if (e.key === 'file') {
-          item = retrieveFile(item)
-        }
+      
         if (item) {
           formData.append(e.key, item)
         }
@@ -59,7 +52,7 @@ const App = () => {
       if (err) {
         return
       }
-      localStorage.clear()
+      // localStorage.clear()
       let res = await fetch('https://9793-85-169-182-214.ngrok-free.app/addUser', {
         method: 'POST',
         body: formData,

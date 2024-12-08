@@ -15,14 +15,6 @@ export const FormFile= ({data, checkErr}) =>{
     console.log(checkErr)
   }, [checkErr])
 
-  const convertFileToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = (error) => reject(error);
-      reader.readAsDataURL(file);
-    });
-  };
 
   return ( 
   <div class='flex flex-col py-3'>
@@ -30,16 +22,14 @@ export const FormFile= ({data, checkErr}) =>{
     {checkErr && !name && data.mandatory ? <div class='text-red-500 text-xs'>Champs obligatoire</div> : null}
 
     <input
-      class=' hidden'
+      class='hidden'
       type='file'
       id={`file-${data.key}`}
       name='file'
+      
       onChange={async (event) => {
         const file = event.target.files[0];
-        const base64 = await convertFileToBase64(file);
-        console.log(file)
-        localStorage.setItem(data.key, base64);
-        localStorage.setItem(`${data.key}-name`, file.name);
+        localStorage.setItem(data.key, file.name);
         setName(file.name)
       }}
       
