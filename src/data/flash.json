@@ -1,0 +1,41 @@
+[
+  {
+    "type": "file",
+    "title": "📷 Capture d’écran du flash qui te plaît ",
+    "key": "img-flash"
+  },
+  {
+    "type": "text",
+    "title": "👤 Emplacement",
+    "key": "flash-position"
+  },
+  {
+    "type": "file",
+    "title": "👤 Photo de l’emplacement",
+    "key": "img-flash-position"
+  },
+  {
+    "type": "text",
+    "title": "📏 Taille (en cm)",
+    "key": "flash-size"
+  },
+  {
+    "type": "selector",
+    "title": "si le flash a déjà été réservé",
+    "key": "flash-context",
+    "values": [
+      "Je suis d’accord pour réaliser un projet qui s’en inspire",
+      "J’ai un autre flash qui me plaît pour remplacer",
+      "Je préfère abandonner la réservation dans ce cas"
+    ]
+  },
+  {
+    "type": "selector",
+    "title": "Je souhaite réserver un second flash",
+    "key": "flash-other",
+    "values": [
+      "Non, ma demande ne concerne qu’un seul flash",
+      "Oui, je souhaite réserver un autre flash"
+    ]
+  }
+]

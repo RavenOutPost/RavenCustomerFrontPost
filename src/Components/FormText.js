@@ -1,14 +1,35 @@
-export const FormText= ({data}) =>
-      <div>
-      <label htmlFor="name">{data.title} :</label>
-      <input
-        type={data.type}
-        id={data.key}
-        name={data.key}
-        // value={formik.values.name}
-        // onChange={formik.handleChange}
-        // onBlur={formik.handleBlur}
-      />
-      {/* {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>} */}
-    </div>
+import { useEffect, useState } from "react"
 
+export const FormText= ({data, checkErr}) =>{
+  const [value, setValue] = useState(null)
+
+
+  useEffect(() => {
+    setValue(localStorage.getItem(data.key))
+  },[data.key])
+
+  useEffect(() => {
+    console.log(checkErr)
+  }, [checkErr])
+
+  return ( 
+  <div class='flex flex-col py-3'>
+    <label class=''>{data.title}</label>
+    {checkErr && !value && data.mandatory ? <div class='text-red-500 text-xs'>Champs obligatoire</div> : null}
+
+    <input
+      class={`border-b-2 border-solid border-${checkErr && !value ? 'red-100' : 'red-400'} w-64 hover:bg-slate-50 rounded-md p-2 bg-transparent`}
+      type={data.type}
+      id={data.key}
+      name={data.key}
+      value={value}
+      onChange={(event) => {
+        setValue(event.target.value)
+        localStorage.setItem(data.key, event.target.value)
+      }}
+      
+      />
+  </div>
+    )}
+    
+    

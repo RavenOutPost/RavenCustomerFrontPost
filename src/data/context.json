@@ -2,35 +2,48 @@
   {
     "type" : "text",
     "title" : "C'est quoi ton nom ? ",
-    "key" : "name"
+    "key": "name",
+    "mandatory": true
   },  {
     "type" : "text",
     "title" : "Prénom",
-    "key" : "firstname"
+    "key": "firstname",
+    "mandatory": true
   },  {
     "type" : "date",
     "title" : "Date de naissance",
-    "key" : "birthdate"
+    "key": "birthdate",
+    "mandatory": true
   },  {
     "type" : "selector",
     "title" : "Pronom(s) avec le(s)quel(s) tu es à l’aise",
     "key" : "pronun",
-    "values" : ["il", "elle", "iel", "ael"]
+    "values": [
+      "il",
+      "elle",
+      "iel",
+      "ael"
+    ],
+    "mandatory": false
   },  {
-    "type" : "phone",
+    "type": "tel",
     "title" : "Numero de téléphone",
-    "key" : "phone"
+    "key": "phone",
+    "mandatory": true
   },  {
     "type" : "email",
     "title" : "Adresse e-mail ",
-    "key" : "email"
+    "key": "email",
+    "mandatory": true
   },  {
     "type" : "dispo",
     "title" : "Disponibilités",
-    "key" : "dispo"
+    "key": "dispo",
+    "mandatory": true
   },  {
     "type" : "text",
     "title" : "Précisions concernant les disponibilités ",
-    "key" : "dispo_comment"
+    "key": "dispo_comment",
+    "mandatory": false
   }
 ]
