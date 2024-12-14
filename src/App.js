@@ -52,8 +52,7 @@ const App = () => {
       if (err) {
         return
       }
-      // localStorage.clear()
-      let res = await fetch('https://9793-85-169-182-214.ngrok-free.app/addUser', {
+      let res = await fetch('https://8418-85-169-182-214.ngrok-free.app/addUser', {
         method: 'POST',
         body: formData,
         headers: {
