@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/RavenCustomerFrontPost/static/css/main.30806088.css",
-    "main.js": "/RavenCustomerFrontPost/static/js/main.97b02fa0.js",
+    "main.css": "/RavenCustomerFrontPost/static/css/main.e52e32cf.css",
+    "main.js": "/RavenCustomerFrontPost/static/js/main.30896eb8.js",
     "static/js/453.329fc053.chunk.js": "/RavenCustomerFrontPost/static/js/453.329fc053.chunk.js",
     "static/media/bg.jpeg": "/RavenCustomerFrontPost/static/media/bg.118fe0bbd8f324a9da14.jpeg",
     "index.html": "/RavenCustomerFrontPost/index.html",
-    "main.30806088.css.map": "/RavenCustomerFrontPost/static/css/main.30806088.css.map",
-    "main.97b02fa0.js.map": "/RavenCustomerFrontPost/static/js/main.97b02fa0.js.map",
+    "main.e52e32cf.css.map": "/RavenCustomerFrontPost/static/css/main.e52e32cf.css.map",
+    "main.30896eb8.js.map": "/RavenCustomerFrontPost/static/js/main.30896eb8.js.map",
     "453.329fc053.chunk.js.map": "/RavenCustomerFrontPost/static/js/453.329fc053.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.30806088.css",
-    "static/js/main.97b02fa0.js"
+    "static/css/main.e52e32cf.css",
+    "static/js/main.30896eb8.js"
   ]
 }
