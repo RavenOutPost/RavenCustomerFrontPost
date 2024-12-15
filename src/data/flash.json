@@ -28,14 +28,5 @@
       "J’ai un autre flash qui me plaît pour remplacer",
       "Je préfère abandonner la réservation dans ce cas"
     ]
-  },
-  {
-    "type": "selector",
-    "title": "Je souhaite réserver un second flash",
-    "key": "flash-other",
-    "values": [
-      "Non, ma demande ne concerne qu’un seul flash",
-      "Oui, je souhaite réserver un autre flash"
-    ]
   }
 ]

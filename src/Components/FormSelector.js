@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const FormSelector = ({data, checkErr}) => {
+export const FormSelector = ({data, checkErr, index}) => {
   const [value, setValue] = useState(null); 
 
   useEffect(() => {
@@ -9,8 +9,7 @@ export const FormSelector = ({data, checkErr}) => {
 
   return (
         <div class='flex flex-col py-2'>
-        <label htmlFor="name">{data.title}
-        </label>
+        <label htmlFor="name" class='font-bold'>{data.title}</label>
         {data.values?.map(e =>
            
         <div>
@@ -22,8 +21,9 @@ export const FormSelector = ({data, checkErr}) => {
             value={e}
             checked={value === e}
             onChange={(_) => {
+              const key = index != null ? `${data.key}-${index}` : data.key
               setValue(e)
-              localStorage.setItem(data.key, e)
+              localStorage.setItem(key, e)
             }}
           />
           <label>{e}</label>

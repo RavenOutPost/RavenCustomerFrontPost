@@ -19,8 +19,8 @@
     "title" : "Pronom(s) avec le(s)quel(s) tu es à l’aise",
     "key" : "pronun",
     "values": [
-      "il",
       "elle",
+      "il",
       "iel",
       "ael"
     ],

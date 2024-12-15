@@ -18,14 +18,5 @@
     "type": "text",
     "title": "📏 Taille (en cm)",
     "key": "project-size"
-  },
-  {
-    "type": "selector",
-    "title": "Je souhaite demander un second projet",
-    "key": "project-other",
-    "values": [
-      "Non, ma demande ne concerne que ce projet",
-      "Oui, j’aimerais réaliser un autre projet"
-    ]
   }
 ]

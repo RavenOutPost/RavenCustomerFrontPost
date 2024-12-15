@@ -1,20 +1,17 @@
 import { useEffect, useState } from "react"
 
-export const FormText= ({data, checkErr}) =>{
-  const [value, setValue] = useState(null)
+export const FormText= ({data, checkErr, index}) =>{
+  const [value, setValue] = useState('')
 
 
   useEffect(() => {
     setValue(localStorage.getItem(data.key))
   },[data.key])
 
-  useEffect(() => {
-    console.log(checkErr)
-  }, [checkErr])
 
   return ( 
   <div class='flex flex-col py-3'>
-    <label class=''>{data.title}</label>
+    <label  class='font-bold'>{data.title}</label>
     {checkErr && !value && data.mandatory ? <div class='text-red-500 text-xs'>Champs obligatoire</div> : null}
 
     <input
@@ -24,8 +21,9 @@ export const FormText= ({data, checkErr}) =>{
       name={data.key}
       value={value}
       onChange={(event) => {
+        const key = index != null ? `${data.key}-${index}` : data.key
         setValue(event.target.value)
-        localStorage.setItem(data.key, event.target.value)
+        localStorage.setItem(key, event.target.value)
       }}
       
       />
