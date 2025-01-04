@@ -5,7 +5,7 @@ import projectData from './data/project.json'
 import flashData from './data/flash.json'
 import { BuildForm } from './Components/BuildForm';
 
-const apiUrl = process.env.API_URL;
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const App = () => {
   const [flash, setFlash] = useState([])
