@@ -5,6 +5,8 @@ import projectData from './data/project.json'
 import flashData from './data/flash.json'
 import { BuildForm } from './Components/BuildForm';
 
+const apiUrl = process.env.API_URL;
+
 const App = () => {
   const [flash, setFlash] = useState([])
   const [btn, setBtn] = useState(true)
@@ -36,7 +38,7 @@ useEffect(() => flash.length < 3 && project.length < 3 ? setBtn(true) : setBtn(f
       })
       for (let i = 0; i < flash.length; i++) {
         flashData.forEach(e => {
-          let key = `${e.key}-${i}`
+          let key = `${e.key}-${i}` 
           let item = localStorage.getItem(key)
           if (e.type === 'file') {
             let fileInput = document.getElementById(`file-${key}`)
@@ -71,7 +73,7 @@ useEffect(() => flash.length < 3 && project.length < 3 ? setBtn(true) : setBtn(f
       if (err) {
         return
       }
-      await fetch('https://8418-85-169-182-214.ngrok-free.app/user', {
+      await fetch(`${apiUrl}/user`, {
         method: 'POST',
         body: formData,
         headers: {
