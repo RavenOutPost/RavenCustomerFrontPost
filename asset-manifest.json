@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/RavenCustomerFrontPost/static/css/main.e52e32cf.css",
-    "main.js": "/RavenCustomerFrontPost/static/js/main.37240982.js",
+    "main.js": "/RavenCustomerFrontPost/static/js/main.b0ee2b17.js",
     "static/js/453.329fc053.chunk.js": "/RavenCustomerFrontPost/static/js/453.329fc053.chunk.js",
     "static/media/bg.jpeg": "/RavenCustomerFrontPost/static/media/bg.118fe0bbd8f324a9da14.jpeg",
     "index.html": "/RavenCustomerFrontPost/index.html",
     "main.e52e32cf.css.map": "/RavenCustomerFrontPost/static/css/main.e52e32cf.css.map",
-    "main.37240982.js.map": "/RavenCustomerFrontPost/static/js/main.37240982.js.map",
+    "main.b0ee2b17.js.map": "/RavenCustomerFrontPost/static/js/main.b0ee2b17.js.map",
     "453.329fc053.chunk.js.map": "/RavenCustomerFrontPost/static/js/453.329fc053.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e52e32cf.css",
-    "static/js/main.37240982.js"
+    "static/js/main.b0ee2b17.js"
   ]
 }
